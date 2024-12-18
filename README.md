@@ -1,7 +1,3 @@
-Below is a **comprehensive README** that reflects the **current structure** of your repository. It highlights the **two main parts** (Training vs. Inference) as well as the **two standalone deterministic parsers** (Address & Datetime). It also includes usage notes and context around each file.
-
----
-
 # NER Flair Address & Datetime Parser
 
 This repository provides two main capabilities:
