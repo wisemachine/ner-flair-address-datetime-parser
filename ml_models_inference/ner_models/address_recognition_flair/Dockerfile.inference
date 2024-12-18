@@ -1,0 +1,13 @@
+FROM --platform=linux/amd64 python:3.8-slim-buster as build
+
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the inference script
+COPY inference.py /opt/program/inference.py
+
+# Define the entry point
+ENV PYTHONUNBUFFERED=TRUE
+ENV PYTHONDONTWRITEBYTECODE=TRUE
+ENTRYPOINT ["python", "/opt/program/inference.py"]
